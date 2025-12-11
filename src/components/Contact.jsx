@@ -1,4 +1,5 @@
 
+// src/components/Contact.jsx
 import React, { useState } from "react";
 
 export default function Contact() {
@@ -9,7 +10,7 @@ export default function Contact() {
     date: "",
     notes: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,25 +19,24 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can connect this to EmailJS, a backend API, Firebase, etc.
-    setSubmitted(true);
+    // Hook this up to EmailJS, backend, or Firebase later
+    setSent(true);
   };
 
   return (
-    <div className="container contact">
-      <div className="contact__info">
-        <h2>Let’s plan your next appointment</h2>
+    <div className="container contact-grid">
+      <div className="contact-grid__info">
+        <h2>Book your braid day</h2>
         <p>
-          Fill out the form and we’ll get back to you with available times and
-          confirmation. For same-day appointments, call or text directly.
+          Send us your details and the style name you liked. We’ll reply with
+          confirmation and exact price based on your hair length and density.
         </p>
-
-        <div className="contact__details">
+        <div className="contact-grid__details">
           <p>
-            <strong>Phone / WhatsApp:</strong> (555) 123-4567
+            <strong>Call / WhatsApp:</strong> (332) 209-6134
           </p>
           <p>
-            <strong>Address:</strong> 123 Africa Way, Harlem, New York, NY
+            <strong>Location:</strong> 123 Africa Way, Bronx, NY
           </p>
           <p>
             <strong>Hours:</strong> Mon–Sat, 9:00 AM – 8:00 PM
@@ -44,38 +44,38 @@ export default function Contact() {
         </div>
       </div>
 
-      <form className="contact__form card" onSubmit={handleSubmit}>
+      <form className="contact-form card" onSubmit={handleSubmit}>
         <div className="form-row">
           <label>
             Full name
             <input
-              type="text"
               name="name"
+              type="text"
               required
+              placeholder="Your name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Your name"
             />
           </label>
         </div>
 
         <div className="form-row form-row--split">
           <label>
-            Phone number
+            Phone
             <input
-              type="tel"
               name="phone"
+              type="tel"
               required
+              placeholder="(555) 123-4567"
               value={form.phone}
               onChange={handleChange}
-              placeholder="(555) 123-4567"
             />
           </label>
           <label>
             Preferred date
             <input
-              type="date"
               name="date"
+              type="date"
               value={form.date}
               onChange={handleChange}
             />
@@ -84,26 +84,26 @@ export default function Contact() {
 
         <div className="form-row">
           <label>
-            Style you’re interested in
+            Style name you liked
             <input
-              type="text"
               name="style"
+              type="text"
+              placeholder="e.g. Mid-back Knotless with Curls"
               value={form.style}
               onChange={handleChange}
-              placeholder="e.g. mid-back knotless, boho locs, kids cornrows"
             />
           </label>
         </div>
 
         <div className="form-row">
           <label>
-            Notes (length, color, questions…)
+            Notes (color, length, questions…)
             <textarea
               name="notes"
               rows={4}
+              placeholder="Tell us your hair length, color ideas, etc."
               value={form.notes}
               onChange={handleChange}
-              placeholder="Tell us about your hair, preferred length, color, etc."
             />
           </label>
         </div>
@@ -112,9 +112,9 @@ export default function Contact() {
           Send request
         </button>
 
-        {submitted && (
+        {sent && (
           <p className="form-success">
-            Thank you! We received your request and will contact you shortly.
+            Thank you! We received your request and will contact you soon.
           </p>
         )}
       </form>

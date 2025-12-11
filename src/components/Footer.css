@@ -1,0 +1,36 @@
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  padding: 1.4rem 0 1.6rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.footer__inner {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__icon {
+  font-size: 1.3rem;
+  color: #f97316;
+  transition: transform 0.18s ease-out, color 0.18s ease-out;
+}
+
+/* Hover glow */
+.footer__icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: #ec4899;
+}

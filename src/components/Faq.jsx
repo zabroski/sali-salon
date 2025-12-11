@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+
+
 const FAQ = [
   {
     q: "Do I need to come with my hair washed and blow-dried?",
