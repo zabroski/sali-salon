@@ -106,8 +106,8 @@ export default function Navbar() {
         <div className="navbar__brand" onClick={() => scrollTo("home")}>
           <div className="navbar__logo-circle">SH</div>
           <div className="navbar__brand-text">
-            <span className="navbar__brand-main">AfroBraids Studio</span>
-            <span className="navbar__brand-sub">Sali Hair Braiding</span>
+            <span className="navbar__brand-main">cheers AfroBraids Studio</span>
+            {/* <span className="navbar__brand-sub">cheers</span> */}
           </div>
         </div>
 

@@ -30,7 +30,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
 
-        <p>© {year} Sali AfroBraids Studio • All rights reserved.</p>
+        <p>© {year} cheers AfroBraids Studio • All rights reserved.</p>
 
         <div className="footer__socials">
           <a

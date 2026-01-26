@@ -33,10 +33,10 @@ export default function Contact() {
         </p>
         <div className="contact-grid__details">
           <p>
-            <strong>Call / WhatsApp:</strong> (332) 209-6134
+            <strong>Call / WhatsApp:</strong> 746-3182
           </p>
           <p>
-            <strong>Location:</strong> 123 Africa Way, Bronx, NY
+            <strong>Location:</strong> Need address here, City, State
           </p>
           <p>
             <strong>Hours:</strong> Mon–Sat, 9:00 AM – 8:00 PM
@@ -66,7 +66,7 @@ export default function Contact() {
               name="phone"
               type="tel"
               required
-              placeholder="(555) 123-4567"
+              placeholder=""
               value={form.phone}
               onChange={handleChange}
             />
@@ -88,7 +88,7 @@ export default function Contact() {
             <input
               name="style"
               type="text"
-              placeholder="e.g. Mid-back Knotless with Curls"
+              placeholder=""
               value={form.style}
               onChange={handleChange}
             />

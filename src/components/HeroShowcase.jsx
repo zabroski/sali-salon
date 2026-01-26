@@ -7,19 +7,19 @@ const HERO_STYLES = [
     name: "Knotless Braids",
     desc: "Lightweight, natural movement – perfect for everyday.",
     // Replace with your own image path or URL
-    image: "/images/knotless-main.jpg",
+    image: "/images/knotless-main.png",
   },
   {
     id: 2,
     name: "Fulani Tribal Braids",
     desc: "Beads, patterns and culture in every part.",
-    image: "/images/fulani-side.jpg",
+    image: "/images/Fulani-Tribal..png",
   },
   {
     id: 3,
     name: "Kids’ Cornrows",
     desc: "Cute, neat and comfortable for little ones.",
-    image: "/images/kids-cornrows.jpg",
+    image: "/images/kid-cornrows.png",
   },
 ];
 
